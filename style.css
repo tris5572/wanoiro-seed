@@ -1,0 +1,71 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	font-family: serif;
+	margin: 0;
+}
+
+#app {
+	height: 100%;
+}
+
+.main-container {
+	height: 100%;
+}
+
+#operation-box {
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#random-button {
+	font-family: serif;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	color: #222;
+	background: #EEE;
+	padding: 0.8em 2em;
+	border: 2px solid #777;
+}
+#random-button:hover {
+	background: #DDD;
+}
+
+#color-data {
+	text-align: center;
+	font-weight: bold;
+}
+#color-data #yomigana {
+	font-size: 1em;
+	margin-bottom: -0.6em;
+}
+#color-data #kanji {
+	font-size: 3em;
+}
+#color-data #color-code {
+	font-size: 2em;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: normal;
+}
+
+.dark-color {
+	color: rgba(0, 0, 0, 0.8);
+}
+.light-color {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #FFF5;
+	width: 100%;
+	text-align: center;
+	padding: 0.4em;
+}

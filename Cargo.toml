@@ -1,0 +1,28 @@
+[package]
+authors = ["tris <nexus4fortune@gmail.com>"]
+categories = ["category"]
+description = "App Description"
+edition = "2018"
+license = "MIT"
+name = "wanoiro"
+readme = "./README.md"
+repository = "https://github.com/seed-rs/seed-quickstart"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.18"
+
+[dependencies]
+rand = "0.8.4"
+seed = "0.8.0"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 'z'
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Os']
