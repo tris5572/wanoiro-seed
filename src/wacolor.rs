@@ -83,13 +83,10 @@ impl WaColor {
     }
 
     /// 色の明るさ（輝度）を返す。範囲は0.0～1.0。
+    #[allow(clippy::suboptimal_flops)]
     pub fn luminance(&self) -> f64 {
         let rgb = self.rgb();
-        // 単に重みを掛けて足すだけなんだけど、Clippyがうるさいので書き換え。
-        (0.3_f64.mul_add(
-            f64::from(rgb[0]),
-            0.6_f64.mul_add(f64::from(rgb[1]), 0.1 * f64::from(rgb[2])),
-        )) / 255.0
+        (0.3 * f64::from(rgb[0]) + 0.6 * f64::from(rgb[1]) + 0.1 * f64::from(rgb[2])) / 255.0
     }
 
     /// RGBを表すHTMLの色指定の文字列を返す。
